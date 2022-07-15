@@ -1,6 +1,12 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+
+import Newscard from "./Components/Newscard/Newscard"
+import Newsimage from "./Images/absolutvision-WYd_PkCa1BY-unsplash.jpg"
+import { AiOutlineHeart } from "react-icons/ai"
+
 import Navbar from "./Components/Navbar/Navbar";
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -15,6 +21,7 @@ function App() {
         );
         const data = await fetchedData.json();
         console.log(data.results);
+        setArticles(data.results)
       } catch (error) {
         console.log(error);
       }
@@ -22,11 +29,43 @@ function App() {
     fetchData();
   }, []);
 
+
+console.log(articles)
+
+  return <div className="App">
+   
+   {articles.map((article,index) => {
+      return (
+        <div key={index} className="Container-flex">
+       
+          <div className="Card">
+          <h1>{article.title}</h1>
+          <h6>{article.pubDate}</h6>
+          <img src={!article.image ? Newsimage:article.image}></img>
+          <p>{article.description}</p>
+
+          <div className="Links">
+            <a href={article.link}>Read more here</a>
+            <button><AiOutlineHeart /></button>
+          </div>
+          </div>
+          
+        
+
+        </div>
+      )
+   }
+
+   )}
+    
+  </div>;
+
   return (
     <div className="App">
       <Navbar />
     </div>
   );
+
 }
 
 export default App;
