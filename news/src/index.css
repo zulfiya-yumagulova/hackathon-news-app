@@ -18,6 +18,14 @@ code {
   align-items: center;
 }
 
+.Card {
+  height: 500px;
+  border: solid 1px #333;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 5px 20px rgb(88 88 88 / 20%);
+}
+
 .Container-flex img {
   width: 300px;
 }

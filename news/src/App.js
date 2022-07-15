@@ -33,6 +33,7 @@ console.log(articles)
       return (
         <div key={index} className="Container-flex">
        
+          <div className="Card">
           <h1>{article.title}</h1>
           <h6>{article.pubDate}</h6>
           <img src={!article.image ? Newsimage:article.image}></img>
@@ -42,6 +43,8 @@ console.log(articles)
             <a href={article.link}>Read more here</a>
             <button><AiOutlineHeart /></button>
           </div>
+          </div>
+          
         
 
         </div>
