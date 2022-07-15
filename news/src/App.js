@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+
       {articles.map((article, index) => {
         return (
           <div key={index} className="display-grid">
