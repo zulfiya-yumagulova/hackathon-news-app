@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+
 import Newscard from "./Components/Newscard/Newscard"
 import Newsimage from "./Images/absolutvision-WYd_PkCa1BY-unsplash.jpg"
 import { AiOutlineHeart } from "react-icons/ai"
+
+import Navbar from "./Components/Navbar/Navbar";
+
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -24,6 +28,7 @@ function App() {
     };
     fetchData();
   }, []);
+
 
 console.log(articles)
 
@@ -54,6 +59,13 @@ console.log(articles)
    )}
     
   </div>;
+
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
+
 }
 
 export default App;
