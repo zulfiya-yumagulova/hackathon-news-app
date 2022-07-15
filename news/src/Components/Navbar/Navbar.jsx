@@ -13,13 +13,13 @@ export default function Navbar() {
             Home
           </a>
           <a className="item-container" href="#">
-            TOPIC A
+            Sports
           </a>
           <a className="item-container" href="#">
-            TOPIC B
+            Weather
           </a>
           <a className="item=container" href="#">
-            TOPIC C
+            Economy
           </a>
         </div>
         <div className="right">

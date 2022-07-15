@@ -18,3 +18,18 @@ code {
   --background: #f5f5f5;
   --dark-background: #232b2b;
 }
+
+html::-webkit-scrollbar {
+  width: 0.5vw;
+  background-color: var(--background);
+  z-index: 1;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 100vw;
+  z-index: 1;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+  z-index: 1;
+}

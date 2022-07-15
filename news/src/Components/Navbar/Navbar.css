@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   overflow-y: hidden;
   transition: 0.3s ease-in;
 }
@@ -15,7 +15,7 @@
 .left .logo {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 50px;
   background: linear-gradient(to right, white 50%, orange 50%, #eb9c5c);
   background-size: 200%;
@@ -73,7 +73,7 @@
 
 .left a {
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 20px;
   text-decoration: none;
   letter-spacing: 0.5px;
