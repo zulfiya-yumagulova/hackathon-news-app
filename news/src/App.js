@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Newscard from "./Components/Newscard/Newscard"
+import Newsimage from "./Images/absolutvision-WYd_PkCa1BY-unsplash.jpg"
+import { AiOutlineHeart } from "react-icons/ai"
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -29,11 +31,19 @@ console.log(articles)
    
    {articles.map((article,index) => {
       return (
-        <div key={index}>
-        <h1>{article.title}</h1>
-        <h6>{article.pubDate}</h6>
-        <p>{article.description}</p>
-        {/* <img>{article.image_url}</img> */}
+        <div key={index} className="Container-flex">
+       
+          <h1>{article.title}</h1>
+          <h6>{article.pubDate}</h6>
+          <img src={!article.image ? Newsimage:article.image}></img>
+          <p>{article.description}</p>
+
+          <div className="Links">
+            <a href={article.link}>Read more here</a>
+            <button><AiOutlineHeart /></button>
+          </div>
+        
+
         </div>
       )
    }
