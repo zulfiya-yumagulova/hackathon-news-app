@@ -32,6 +32,9 @@ function App() {
               <h2>{article.title}</h2>
               <p>{article.description}</p>
               <h5>{article.pubDate}</h5>
+              <a href={article.link} target="">
+                Read More
+              </a>
             </div>
           </div>
         );
