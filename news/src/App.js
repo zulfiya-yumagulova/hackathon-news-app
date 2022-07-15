@@ -15,6 +15,7 @@ function App() {
         );
         const data = await fetchedData.json();
         console.log(data.results);
+        setArticles(data.results);
       } catch (error) {
         console.log(error);
       }
@@ -27,12 +28,12 @@ function App() {
       <Navbar />
       {articles.map((article, index) => {
         return (
-          <div className="display-grid">
+          <div key={index} className="display-grid">
             <div className="card">
               <h2>{article.title}</h2>
               <p>{article.description}</p>
-              <h5>{article.pubDate}</h5>
-              <a href={article.link} target="">
+              <h5>Published at {article.pubDate}</h5>
+              <a href={article.link} target="_blank">
                 Read More
               </a>
             </div>
