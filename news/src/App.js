@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
-import Card from "./Components/Newscard/Newscard.js";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -26,6 +25,17 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      {articles.map((article, index) => {
+        return (
+          <div className="display-grid">
+            <div className="card">
+              <h2>{article.title}</h2>
+              <p>{article.description}</p>
+              <h5>{article.pubDate}</h5>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
