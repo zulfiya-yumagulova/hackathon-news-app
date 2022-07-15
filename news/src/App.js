@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   const [articles, setArticles] = useState([]);
@@ -21,7 +22,11 @@ function App() {
     fetchData();
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
 }
 
 export default App;
